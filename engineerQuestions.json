@@ -1,0 +1,20 @@
+[{
+    "name": "github",
+    "type": "input",
+    "message": "Enter github: "
+},
+{
+    "name": "id",
+    "type": "input",
+    "message": "Enter employee's id: " 
+},
+{
+    "name": "name",
+    "type": "input",
+    "message": "Enter employee's name: " 
+},
+{
+    "name": "email",
+    "type": "input",
+    "message": "Enter employee's email: " 
+}]

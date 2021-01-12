@@ -10,10 +10,12 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 const questions = require("./questions.json");
+const managerQuestions = require("./managerQuestions.json");
+const engineerQuestions = require("./engineerQuestions.json");
+const internQuestions = require("./internQuestions.json");
 
 const employees = [];
 
@@ -22,26 +24,7 @@ getEmployees = () =>{
     .then(response => {
         switch (response.role){
             case "Manager" :
-                inquirer.prompt([{
-                    name: "officeNumber",
-                    type: "input",
-                    message: "Enter office number: "
-                },
-                {
-                    "name": "id",
-                    "type": "input",
-                    "message": "Enter employee's id: " 
-                },
-                {
-                    "name": "name",
-                    "type": "input",
-                    "message": "Enter employee's name: " 
-                },
-                {
-                    "name": "email",
-                    "type": "input",
-                    "message": "Enter employee's email: " 
-                }])
+                inquirer.prompt(managerQuestions)
                 .then(employee => {
                     const manager = new Manager(employee.name, employee.id, employee.email, employee.officeNumber);
                     employees.push(manager);
@@ -49,26 +32,7 @@ getEmployees = () =>{
                 })
                 break;
             case "Engineer" :
-                inquirer.prompt([{
-                    name: "github",
-                    type: "input",
-                    message: "Enter github: "
-                },
-                {
-                    "name": "id",
-                    "type": "input",
-                    "message": "Enter employee's id: " 
-                },
-                {
-                    "name": "name",
-                    "type": "input",
-                    "message": "Enter employee's name: " 
-                },
-                {
-                    "name": "email",
-                    "type": "input",
-                    "message": "Enter employee's email: " 
-                }])
+                inquirer.prompt(engineerQuestions)
                 .then(employee => {
                     const engineer = new Engineer(employee.name, employee.id, employee.email, employee.github);
                     employees.push(engineer);
@@ -76,26 +40,7 @@ getEmployees = () =>{
                 })
                 break;
             case "Intern" :
-                inquirer.prompt([{
-                    name: "school",
-                    type: "input",
-                    message: "Enter school: "
-                },
-                {
-                    "name": "id",
-                    "type": "input",
-                    "message": "Enter employee's id: " 
-                },
-                {
-                    "name": "name",
-                    "type": "input",
-                    "message": "Enter employee's name: " 
-                },
-                {
-                    "name": "email",
-                    "type": "input",
-                    "message": "Enter employee's email: " 
-                }])
+                inquirer.prompt(internQuestions)
                 .then(employee => {
                     const intern = new Intern(employee.name, employee.id, employee.email, employee.school);
                     employees.push(intern);
@@ -104,9 +49,9 @@ getEmployees = () =>{
                 break;
             case "finished":
                 renderEmployees(employees);
-                console.log(`employees: `, employees);
                 break;
             default :
+                renderEmployees(employees);
                 break;
         }
     })
@@ -117,8 +62,7 @@ getEmployees();
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
 const renderEmployees = employees => {
-    const rendered = render(employees);
-    console.log(rendered);
+    const rendered = render(employees);    
     saveHTML(rendered);
 }
 // After you have your html, you're now ready to create an HTML file using the HTML
