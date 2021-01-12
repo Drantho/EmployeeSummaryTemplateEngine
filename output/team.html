@@ -13,23 +13,27 @@
 </head>
 
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 jumbotron mb-3 team-heading">
+                <h1 class="text-center">My Team</h1>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
-        <h2>Accordion Example</h2>
-        <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements
-            under the specified parent will be closed when one of the collapsible item is shown.</p>
         <div id="accordion">
             <div class="card">
   <div class="card-header">
     <a class="card-link" data-toggle="collapse" href="#Manager">
-      Manager
+      <h2><i class="fas fa-mug-hot mr-2"></i> Manager</h2>
     </a>
   </div>
-  <div id="Manager" class="collapse" data-parent="#accordion">
+  <div id="Manager" class="collapse show" data-parent="#accordion">
     <div class="card-body"><div class="card employee-card">
     <div class="card-header">
-        <h2 class="card-title">a</h2>
-        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
+        <h2 class="card-title"><i class="fas fa-mug-hot mr-2"></i> a</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }}</h3> -->
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -45,14 +49,14 @@
 </div><div class="card">
   <div class="card-header">
     <a class="card-link" data-toggle="collapse" href="#Engineers">
-      Engineers
+      <h2><i class="fas fa-glasses mr-2"></i> Engineers</h2>
     </a>
   </div>
   <div id="Engineers" class="collapse" data-parent="#accordion">
     <div class="card-body"><div class="card employee-card">
     <div class="card-header">
-        <h2 class="card-title">b</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+        <h2 class="card-title"><i class="fas fa-glasses mr-2"></i> b</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3> -->
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -64,14 +68,27 @@
 </div>
 <div class="card employee-card">
     <div class="card-header">
-        <h2 class="card-title">c</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>Engineer</h3>
+        <h2 class="card-title"><i class="fas fa-glasses mr-2"></i> b</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3> -->
     </div>
     <div class="card-body">
         <ul class="list-group">
-            <li class="list-group-item">ID: c</li>
-            <li class="list-group-item">Email: <a href="mailto:c">c</a></li>
-            <li class="list-group-item">GitHub: <a href="https://github.com/c" target="_blank" rel="noopener noreferrer">c</a></li>
+            <li class="list-group-item">ID: b</li>
+            <li class="list-group-item">Email: <a href="mailto:b">b</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/b" target="_blank" rel="noopener noreferrer">b</a></li>
+        </ul>
+    </div>
+</div>
+<div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title"><i class="fas fa-glasses mr-2"></i> b</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3> -->
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: b</li>
+            <li class="list-group-item">Email: <a href="mailto:b">b</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/b" target="_blank" rel="noopener noreferrer">b</a></li>
         </ul>
     </div>
 </div>
@@ -81,33 +98,46 @@
 </div><div class="card">
   <div class="card-header">
     <a class="card-link" data-toggle="collapse" href="#Interns">
-      Interns
+      <h2><i class="fas fa-user-graduate mr-2"></i> Interns</h2>
     </a>
   </div>
   <div id="Interns" class="collapse" data-parent="#accordion">
     <div class="card-body"><div class="card employee-card">
     <div class="card-header">
-        <h2 class="card-title">d</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
+        <h2 class="card-title"><i class="fas fa-user-graduate mr-2"></i> c</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3> -->
     </div>
     <div class="card-body">
         <ul class="list-group">
-            <li class="list-group-item">ID: d</li>
-            <li class="list-group-item">Email: <a href="mailto:d">d</a></li>
-            <li class="list-group-item">School: d</li>
+            <li class="list-group-item">ID: c</li>
+            <li class="list-group-item">Email: <a href="mailto:c">c</a></li>
+            <li class="list-group-item">School: c</li>
         </ul>
     </div>
 </div>
 <div class="card employee-card">
     <div class="card-header">
-        <h2 class="card-title">e</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>Intern</h3>
+        <h2 class="card-title"><i class="fas fa-user-graduate mr-2"></i> c</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3> -->
     </div>
     <div class="card-body">
         <ul class="list-group">
-            <li class="list-group-item">ID: e</li>
-            <li class="list-group-item">Email: <a href="mailto:e">e</a></li>
-            <li class="list-group-item">School: e</li>
+            <li class="list-group-item">ID: c</li>
+            <li class="list-group-item">Email: <a href="mailto:c">c</a></li>
+            <li class="list-group-item">School: c</li>
+        </ul>
+    </div>
+</div>
+<div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title"><i class="fas fa-user-graduate mr-2"></i> c</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3> -->
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">ID: c</li>
+            <li class="list-group-item">Email: <a href="mailto:c">c</a></li>
+            <li class="list-group-item">School: c</li>
         </ul>
     </div>
 </div>
