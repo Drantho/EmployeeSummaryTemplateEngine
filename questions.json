@@ -3,21 +3,6 @@
         "name": "role",
         "type": "list",
         "message": "Enter employee's role: ",
-        "choices": ["Manager", "Engineer", "Intern"] 
-    },
-    {
-        "name": "id",
-        "type": "input",
-        "message": "Enter employee's id: " 
-    },
-    {
-        "name": "name",
-        "type": "input",
-        "message": "Enter employee's name: " 
-    },
-    {
-        "name": "email",
-        "type": "input",
-        "message": "Enter employee's email: " 
+        "choices": ["Manager", "Engineer", "Intern", "finished"] 
     }
 ]

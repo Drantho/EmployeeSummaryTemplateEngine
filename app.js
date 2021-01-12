@@ -15,16 +15,126 @@ const render = require("./lib/htmlRenderer");
 // and to create objects for each team member (using the correct classes as blueprints!)
 const questions = require("./questions.json");
 
+const employees = [];
+
+getEmployees = () =>{
+    inquirer.prompt(questions)
+    .then(response => {
+        switch (response.role){
+            case "Manager" :
+                inquirer.prompt([{
+                    name: "officeNumber",
+                    type: "input",
+                    message: "Enter office number: "
+                },
+                {
+                    "name": "id",
+                    "type": "input",
+                    "message": "Enter employee's id: " 
+                },
+                {
+                    "name": "name",
+                    "type": "input",
+                    "message": "Enter employee's name: " 
+                },
+                {
+                    "name": "email",
+                    "type": "input",
+                    "message": "Enter employee's email: " 
+                }])
+                .then(employee => {
+                    const manager = new Manager(employee.name, employee.id, employee.email, employee.officeNumber);
+                    employees.push(manager);
+                    getEmployees();
+                })
+                break;
+            case "Engineer" :
+                inquirer.prompt([{
+                    name: "github",
+                    type: "input",
+                    message: "Enter github: "
+                },
+                {
+                    "name": "id",
+                    "type": "input",
+                    "message": "Enter employee's id: " 
+                },
+                {
+                    "name": "name",
+                    "type": "input",
+                    "message": "Enter employee's name: " 
+                },
+                {
+                    "name": "email",
+                    "type": "input",
+                    "message": "Enter employee's email: " 
+                }])
+                .then(employee => {
+                    const engineer = new Engineer(employee.name, employee.id, employee.email, employee.github);
+                    employees.push(engineer);
+                    getEmployees();
+                })
+                break;
+            case "Intern" :
+                inquirer.prompt([{
+                    name: "school",
+                    type: "input",
+                    message: "Enter school: "
+                },
+                {
+                    "name": "id",
+                    "type": "input",
+                    "message": "Enter employee's id: " 
+                },
+                {
+                    "name": "name",
+                    "type": "input",
+                    "message": "Enter employee's name: " 
+                },
+                {
+                    "name": "email",
+                    "type": "input",
+                    "message": "Enter employee's email: " 
+                }])
+                .then(employee => {
+                    const intern = new Intern(employee.name, employee.id, employee.email, employee.school);
+                    employees.push(intern);
+                    getEmployees();
+                })
+                break;
+            case "finished":
+                renderEmployees(employees);
+                console.log(`employees: `, employees);
+                break;
+            default :
+                break;
+        }
+    })
+}
+
+getEmployees();
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
-
+const renderEmployees = employees => {
+    const rendered = render(employees);
+    console.log(rendered);
+    saveHTML(rendered);
+}
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
 // `output` folder. You can use the variable `outputPath` above target this location.
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
-
+const saveHTML = html => {
+    fs.writeFile(outputPath, html, error => {
+        if(error){
+            throw(error)
+        }
+        
+        console.log('file created successfully.');        
+    })
+}
 // HINT: each employee type (manager, engineer, or intern) has slightly different
 // information; write your code to ask different questions via inquirer depending on
 // employee type.
