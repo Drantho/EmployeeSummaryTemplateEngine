@@ -2,7 +2,7 @@
     {
         "name": "role",
         "type": "list",
-        "message": "Enter employee's role: ",
+        "message": "Enter employee's role (or finished to quit): ",
         "choices": ["Manager", "Engineer", "Intern", "finished"] 
     }
 ]

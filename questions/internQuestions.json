@@ -1,0 +1,22 @@
+[
+    {
+        "name": "name",
+        "type": "input",
+        "message": "Enter employee's name: "
+    },
+    {
+        "name": "id",
+        "type": "input",
+        "message": "Enter employee's id: "
+    },
+    {
+        "name": "email",
+        "type": "input",
+        "message": "Enter employee's email: "
+    },
+    {
+        "name": "school",
+        "type": "input",
+        "message": "Enter school: "
+    }
+]

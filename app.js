@@ -12,10 +12,10 @@ const render = require("./lib/htmlRenderer");
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
-const questions = require("./questions.json");
-const managerQuestions = require("./managerQuestions.json");
-const engineerQuestions = require("./engineerQuestions.json");
-const internQuestions = require("./internQuestions.json");
+const questions = require("./questions/questions.json");
+const managerQuestions = require("./questions/managerQuestions.json");
+const engineerQuestions = require("./questions/engineerQuestions.json");
+const internQuestions = require("./questions/internQuestions.json");
 
 const employees = [];
 
