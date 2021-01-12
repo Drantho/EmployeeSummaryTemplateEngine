@@ -24,12 +24,19 @@ getEmployees = () =>{
     .then(response => {
         switch (response.role){
             case "Manager" :
-                inquirer.prompt(managerQuestions)
-                .then(employee => {
-                    const manager = new Manager(employee.name, employee.id, employee.email, employee.officeNumber);
-                    employees.push(manager);
+                if(managerExists()){
+                    console.log(`Only 1 manager supported.`);
                     getEmployees();
-                })
+                    break;
+                }
+                else{
+                    inquirer.prompt(managerQuestions)
+                    .then(employee => {
+                        const manager = new Manager(employee.name, employee.id, employee.email, employee.officeNumber);
+                        employees.push(manager);
+                        getEmployees();
+                    })
+                }
                 break;
             case "Engineer" :
                 inquirer.prompt(engineerQuestions)
@@ -83,6 +90,9 @@ const saveHTML = html => {
 // information; write your code to ask different questions via inquirer depending on
 // employee type.
 
+const managerExists = () =>{
+    return employees.find(element => element.getRole() === "Manager");
+}
 // HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
 // and Intern classes should all extend from a class named Employee; see the directions
 // for further information. Be sure to test out each class and verify it generates an
