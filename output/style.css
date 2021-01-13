@@ -1,4 +1,49 @@
-.employee-card{
-    display: inline-block;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: "Monsterrat", sans-serif;
 }
 
+.card{
+    border: 1px solid orange;
+}
+
+.employee-card{
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.card>.card-header{
+    background-color: orange;
+    color: white;
+}
+
+.employee-card>.card-header{
+    background-color:white;
+    color: orange;
+    border-bottom: 1px solid orange;
+}
+
+.card-header a{
+    color: white;
+}
+
+.list-group-item{
+    border: 1px solid orange;
+}
+
+.list-group-item>strong{
+    color: orange;
+}
+
+#accordion{
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+    border: 0;
+    padding: 0;
+}
+
+.jumbotron{
+    background-color: white !important;
+    color: orange;
+}
