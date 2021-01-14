@@ -12,7 +12,7 @@ body{
 
 .employee-card{
     display: inline-block;
-    margin: 0 8px;
+    margin: 5px 8px ;
 }
 
 .card>.card-header{
