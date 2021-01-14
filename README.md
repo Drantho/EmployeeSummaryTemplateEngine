@@ -39,6 +39,27 @@
   - team.html
   - style.css
 
+  ### Walkthrough
+  - video: https://drive.google.com/file/d/1-qfy7LZd5hLmvwh4THoqu9XdKpfKqZku/view
+  - gif: 
+
+  ### Screen shots
+
+  CLI
+  ![Screen shot of CLI](./assets/images/screenshot1.png?raw=true "CLI Screen shot")
+
+  CLI
+  ![Screen shot of CLI](./assets/images/screenshot2.png?raw=true "CLI Screen shot")
+
+  CLI
+  ![Screen shot of CLI](./assets/images/screenshot3.png?raw=true "CLI Screen shot")
+
+  Output HTML
+  ![Screen shot of HTML output](./assets/images/screenshot4.png?raw=true "Output Screen shot")
+
+  Output HTML
+  ![Screen shot of HTML output](./assets/images/screenshot5.png?raw=true "Output Screen shot")
+
   -------------------------------------------------------------------------------
   ## Contributing 
 
@@ -58,8 +79,8 @@
   ## Future Development 
 
   - Add search feature. 
-  - Add more contact properties. 
-  - Add roles. 
+  - Add contact properties. 
+  - Add role types. 
 
   -------------------------------------------------------------------------------
   ## Questions
