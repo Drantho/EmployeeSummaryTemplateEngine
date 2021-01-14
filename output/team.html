@@ -2,109 +2,126 @@
 <html>
 
 <head>
-  <title>Bootstrap Example</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://kit.fontawesome.com/c502137733.js"></script>
-  <link rel="stylesheet" href="style.css">
+    <title>Team Directory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12 jumbotron mb-3 team-heading">
-        <h1 class="text-center">My Team</h1>
-      </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 jumbotron mb-3 team-heading">
+                <h1 class="text-center">My Team</h1>
+            </div>
+        </div>
     </div>
+
+    <div class="container">
+        <div id="accordion">
+            <div class="card">
+  <div class="card-header">
+    <a class="card-link" data-toggle="collapse" href="#Manager">
+      <h2><i class="fas fa-mug-hot mr-2"></i> Manager</h2>
+    </a>
   </div>
-
-  <div class="container">
-    <div id="accordion">
-      <div class="card">
-        <div class="card-header">
-          <a class="card-link" data-toggle="collapse" href="#Manager">
-            <h2><i class="fas fa-mug-hot mr-2"></i> Manager</h2>
-          </a>
-        </div>
-        <div id="Manager" class="collapse show" data-parent="#accordion">
-          <div class="card-body">
-            <div class="card employee-card">
-              <div class="card-header">
-                <h2 class="card-title"><i class="fas fa-mug-hot mr-2"></i> a</h2>
-                <!-- <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }}</h3> -->
-              </div>
-              <div class="card-body">
-                <ul class="list-group">
-                  <li class="list-group-item"><strong>ID: </strong>a</li>
-                  <li class="list-group-item"><strong>Email: </strong><a href="mailto:a">a</a></li>
-                  <li class="list-group-item"><strong>Office number: </strong>a</li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <a class="card-link" data-toggle="collapse" href="#Engineers">
-            <h2><i class="fas fa-glasses mr-2"></i> Engineers</h2>
-          </a>
-        </div>
-        <div id="Engineers" class="collapse" data-parent="#accordion">
-          <div class="card-body">
-            <div class="card employee-card">
-              <div class="card-header">
-                <h2 class="card-title"><i class="fas fa-glasses mr-2"></i> a</h2>
-                <!-- <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3> -->
-              </div>
-              <div class="card-body">
-                <ul class="list-group">
-                  <li class="list-group-item"><strong>ID: </strong>a</li>
-                  <li class="list-group-item"><strong>Email: </strong><a href="mailto:a">a</a></li>
-                  <li class="list-group-item"><strong>GitHub: </strong><a href="https://github.com/a" target="_blank"
-                      rel="noopener noreferrer">a</a></li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <a class="card-link" data-toggle="collapse" href="#Interns">
-            <h2><i class="fas fa-user-graduate mr-2"></i> Interns</h2>
-          </a>
-        </div>
-        <div id="Interns" class="collapse" data-parent="#accordion">
-          <div class="card-body">
-            <div class="card employee-card">
-              <div class="card-header">
-                <h2 class="card-title"><i class="fas fa-user-graduate mr-2"></i> a</h2>
-                <!-- <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3> -->
-              </div>
-              <div class="card-body">
-                <ul class="list-group">
-                  <li class="list-group-item"><strong>ID: </strong>a</li>
-                  <li class="list-group-item"><strong>Email: </strong><a href="mailto:a">a</a></li>
-                  <li class="list-group-item"><strong>School: </strong>a</li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
+  <div id="Manager" class="collapse show" data-parent="#accordion">
+    <div class="card-body"><div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title"><i class="fas fa-mug-hot mr-2"></i> Anthony</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }}</h3> -->
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item"><strong>ID: </strong>001</li>
+            <li class="list-group-item"><strong>Email: </strong><a href="mailto:drantho@gmail.com">drantho@gmail.com</a></li>
+            <li class="list-group-item"><strong>Office number: </strong>102</li>
+        </ul>
+    </div>
+</div>
 
     </div>
   </div>
+</div><div class="card">
+  <div class="card-header">
+    <a class="card-link" data-toggle="collapse" href="#Engineers">
+      <h2><i class="fas fa-glasses mr-2"></i> Engineers</h2>
+    </a>
+  </div>
+  <div id="Engineers" class="collapse" data-parent="#accordion">
+    <div class="card-body"><div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title"><i class="fas fa-glasses mr-2"></i> fred</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3> -->
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item"><strong>ID: </strong>a</li>
+            <li class="list-group-item"><strong>Email: </strong><a href="mailto:a">a</a></li>
+            <li class="list-group-item"><strong>GitHub: </strong><a href="https://github.com/a" target="_blank" rel="noopener noreferrer">a</a></li>
+        </ul>
+    </div>
+</div>
+<div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title"><i class="fas fa-glasses mr-2"></i> bob</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3> -->
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item"><strong>ID: </strong>b</li>
+            <li class="list-group-item"><strong>Email: </strong><a href="mailto:b">b</a></li>
+            <li class="list-group-item"><strong>GitHub: </strong><a href="https://github.com/b" target="_blank" rel="noopener noreferrer">b</a></li>
+        </ul>
+    </div>
+</div>
 
+    </div>
+  </div>
+</div><div class="card">
+  <div class="card-header">
+    <a class="card-link" data-toggle="collapse" href="#Interns">
+      <h2><i class="fas fa-user-graduate mr-2"></i> Interns</h2>
+    </a>
+  </div>
+  <div id="Interns" class="collapse" data-parent="#accordion">
+    <div class="card-body"><div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title"><i class="fas fa-user-graduate mr-2"></i> joe</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3> -->
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item"><strong>ID: </strong>c</li>
+            <li class="list-group-item"><strong>Email: </strong><a href="mailto:c">c</a></li>
+            <li class="list-group-item"><strong>School: </strong>c</li>
+        </ul>
+    </div>
+</div>
+<div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title"><i class="fas fa-user-graduate mr-2"></i> bill</h2>
+        <!-- <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3> -->
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item"><strong>ID: </strong>d</li>
+            <li class="list-group-item"><strong>Email: </strong><a href="mailto:d">d</a></li>
+            <li class="list-group-item"><strong>School: </strong>d</li>
+        </ul>
+    </div>
+</div>
 
-
+    </div>
+  </div>
+</div>
+        </div>
+    </div>
+    
 </body>
 
 </html>
