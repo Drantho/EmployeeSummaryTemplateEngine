@@ -4,6 +4,7 @@
 body{
     font-family: "Monsterrat", sans-serif;
     padding-bottom: 25px;
+    background: #e6e6e6;
 }
 
 .card{
@@ -47,4 +48,5 @@ body{
 .jumbotron{
     background-color: white !important;
     color: orange;
+    margin: 0 !important;
 }
